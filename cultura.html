@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cultura - Italia a tu mesa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="nav-left">
+      <img src="images/logo.webp" alt="Italia a tu mesa" class="logo">
+    </div>
+    </div>
+    <div class="nav-center">
+      <a href="index.html"><img src="images/logohome.webp" alt="Inicio" class="home-icon"></a>
+    </div>
+    <nav class="nav-right">
+      <a href="cultura.html" class="active">CULTURA</a>
+      <a href="frases.html">FRASES</a>
+      <a href="historia.html">HISTORIA</a>
+      <a href="recetas.html">RECETAS</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1 class="page-title">Cultura Italiana</h1>
+
+    <section class="cultura-item">
+      <img src="images/coliseo.webp" alt="Coliseo Romano" class="cultura-img">
+      <div class="cultura-info">
+        <h3>El Coliseo Romano</h3>
+        <p>Un símbolo de la grandeza del Imperio Romano, ubicado en el corazón de Roma.</p>
+      </div>
+    </section>
+
+    <section class="cultura-item">
+      <img src="images/torre-pisa.webp" alt="Torre de Pisa" class="cultura-img">
+      <div class="cultura-info">
+        <h3>Torre de Pisa</h3>
+        <p>Famosa por su inclinación, es uno de los monumentos más reconocidos de Italia.</p>
+      </div>
+    </section>
+
+    <section class="cultura-item">
+      <img src="images/vinedo.webp" alt="Viñedos italianos" class="cultura-img">
+      <div class="cultura-info">
+        <h3>Viñedos Italianos</h3>
+        <p>Italia es mundialmente conocida por su vino, tradición que forma parte de su identidad.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Italia a tu mesa. Todos los derechos reservados.</p>
+    <p>By Lorena Villegas</p>
+  </footer>
+  <button id="btnSubir" title="Subir arriba">↑</button>
+  
+  <script>
+  // Toggle del menú
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('.nav-right');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
+  // Botón subir
+  const btnSubir = document.getElementById('btnSubir');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btnSubir.style.display = "block";
+    } else {
+      btnSubir.style.display = "none";
+    }
+  };
+
+  btnSubir.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+
+</html>

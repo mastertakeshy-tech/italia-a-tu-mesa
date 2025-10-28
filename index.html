@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Italia a tu mesa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="nav-left">
+      <a href="index.html"><img src="images/logo.webp" alt="Italia a tu mesa" class="logo"></a>
+    </div>
+    <div class="nav-center">
+      <a href="index.html"><img src="images/logohome.webp" alt="Inicio" class="home-icon"></a>
+    </div>
+    <nav class="nav-right">
+      <a href="cultura.html">CULTURA</a>
+      <a href="frases.html">FRASES</a>
+      <a href="historia.html">HISTORIA</a>
+      <a href="recetas.html">RECETAS</a>
+
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>ITALIA A TU MESA</h1>
+      <p>Un viaje a Italia servido en tu mesa, pensado para los amantes de la buena cocina en Colombia. </p>
+      <div class="botones-index">
+  <a href="recetas.html" class="btn-outline">Ver recetas</a>
+  <a href="cultura.html" class="btn-outline">Conocer cultura</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recetas -->
+  <section class="recetas">
+    <h2>Recetas tradicionales</h2>
+    <div class="recetas-grid">
+      <div class="card">
+        <img src="images/pizza-napolitana.webp" alt="Pizza Napolitana">
+        <h3>Pizza Napolitana</h3>
+        <a href="pizza.html" class="btn-small">Ver receta</a>
+      </div>
+      <div class="card">
+        <img src="images/pasta-pesto.webp" alt="Pasta al Pesto">
+        <h3>Pasta al Pesto</h3>
+        <a href="pesto.html" class="btn-small">Ver receta</a>
+      </div>
+      <div class="card">
+        <img src="images/tiramisu.webp" alt="Tiramisú">
+        <h3>Tiramisú</h3>
+        <a href="tiramisu.html" class="btn-small">Ver receta</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Historia de platos -->
+  <section class="historia">
+    <h2>Historia de los platos</h2>
+    <div class="historia-grid">
+  <div class="video">
+    <video controls>
+      <source src="video/historia.mp4" type="video/mp4">
+      Tu navegador no soporta el video. <!-- POR SI ACASO  -->
+    </video>
+  </div>
+
+  <ul class="platos-lista">
+    <li><a href="historia.html">Historia de la Pizza</a></li>
+    <li><a href="historia.html">Historia de la Pasta al pesto</a></li>
+    <li><a href="historia.html">Historia del Tiramisú</a></li>
+  </ul>
+</div>
+  </section>
+
+  <!-- Frases en Italiano -->
+  <section class="frases-tabla">
+    <h2>Frases en Italiano</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Italiano</th>
+          <th>Español</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Buon appetito!</td>
+          <td>¡Buen provecho!</td>
+        </tr>
+        <tr>
+          <td>Vorrei una pizza.</td>
+          <td>Quisiera una pizza.</td>
+        </tr>
+        <tr>
+          <td>Grazie mille.</td>
+          <td>Muchas gracias.</td>
+        </tr>
+      </tbody>
+    </table>
+     <!-- Botón Ver más -->
+    <div class="acciones-frases">
+      <a href="frases.html" class="btn-outline">Ver más frases</a>
+    </div>
+  </section>
+
+ <footer>
+    <p>© 2025 Italia a tu mesa. Todos los derechos reservados.</p>
+    <p>By Lorena Villegas</p>
+  </footer>
+<button id="btnSubir" title="Subir arriba">↑</button>
+
+<script>
+  // Toggle del menú
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('.nav-right');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
+  // Botón subir
+  const btnSubir = document.getElementById('btnSubir');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btnSubir.style.display = "block";
+    } else {
+      btnSubir.style.display = "none";
+    }
+  };
+
+  btnSubir.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+  </body>
+</html>

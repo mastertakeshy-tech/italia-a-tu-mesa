@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Frases - Italia a tu mesa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="nav-left">
+      <img src="images/logo.webp" alt="Italia a tu mesa" class="logo">
+    </div>
+    <div class="nav-center">
+      <a href="index.html"><img src="images/logohome.webp" alt="Inicio" class="home-icon"></a>
+    </div>
+    <nav class="nav-right">
+      <a href="cultura.html">CULTURA</a>
+      <a href="frases.html" class="active">FRASES</a>
+      <a href="historia.html">HISTORIA</a>
+      <a href="recetas.html">RECETAS</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1 class="page-title">Frases en Italiano</h1>
+
+    <section class="frases-tabla">
+      <h2>Saludos</h2>
+      <table>
+        <tr><th>Español</th><th>Italiano</th></tr>
+        <tr><td>Hola</td><td>Ciao</td></tr>
+        <tr><td>Buenos días</td><td>Buongiorno</td></tr>
+        <tr><td>Buenas tardes</td><td>Buon pomeriggio</td></tr>
+        <tr><td>Buenas noches</td><td>Buona sera / Buona notte</td></tr>
+      </table>
+
+      <h2>Despedidas</h2>
+      <table>
+        <tr><th>Español</th><th>Italiano</th></tr>
+        <tr><td>Adiós</td><td>Addio</td></tr>
+        <tr><td>Hasta luego</td><td>Arrivederci</td></tr>
+        <tr><td>Nos vemos</td><td>Ci vediamo</td></tr>
+        <tr><td>Cuídate</td><td>Stammi bene</td></tr>
+      </table>
+
+      <h2>Frases en un restaurante</h2>
+      <table>
+        <tr><th>Español</th><th>Italiano</th></tr>
+        <tr><td>Quisiera una pizza</td><td>Vorrei una pizza</td></tr>
+        <tr><td>¿Qué me recomienda?</td><td>Cosa mi consiglia?</td></tr>
+        <tr><td>La cuenta, por favor</td><td>Il conto, per favore</td></tr>
+        <tr><td>Una mesa para dos</td><td>Un tavolo per due</td></tr>
+      </table>
+
+      <h2>Frases básicas de cortesía</h2>
+      <table>
+        <tr><th>Español</th><th>Italiano</th></tr>
+        <tr><td>Por favor</td><td>Per favore</td></tr>
+        <tr><td>Gracias</td><td>Grazie</td></tr>
+        <tr><td>Muchas gracias</td><td>Grazie mille</td></tr>
+        <tr><td>De nada</td><td>Prego</td></tr>
+        <tr><td>Perdón / Disculpe</td><td>Scusi</td></tr>
+      </table>
+
+      <h2>Vocabulario útil</h2>
+      <ul>
+        <br><b>Acqua</b> → Agua</li>
+        <br><b>Pane</b> → Pan</li>
+        <br><b>Vino</b> → Vino</li>
+        <br><b>Formaggio</b> → Queso</li>
+        <br><b>Pasta</b> → Pasta</li>
+        <br><b>Dolce</b> → Postre</li>
+        <br><b>Conto</b> → Cuenta</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Italia a tu mesa. Todos los derechos reservados.</p>
+    <p>By Lorena Villegas</p>
+  </footer>
+  <button id="btnSubir" title="Subir arriba">↑</button>
+ 
+ <script>
+  // Toggle del menú
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('.nav-right');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
+  // Botón subir
+  const btnSubir = document.getElementById('btnSubir');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btnSubir.style.display = "block";
+    } else {
+      btnSubir.style.display = "none";
+    }
+  };
+
+  btnSubir.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>

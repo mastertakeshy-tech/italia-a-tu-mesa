@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiramisú - Italia a tu mesa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="nav-left">
+      <img src="images/logo.webp" alt="Italia a tu mesa" class="logo">
+    </div>
+    <div class="nav-center">
+      <a href="/index.html"><img src="images/logohome.webp" alt="Inicio" class="home-icon"></a>
+    </div>
+    <nav class="nav-right">
+      <a href="cultura.html">CULTURA</a>
+      <a href="frases.html">FRASES</a>
+      <a href="historia.html">HISTORIA</a>
+      <a href="recetas.html" class="active">RECETAS</a>
+    </nav>
+  </header>
+
+  <!-- Receta Tiramisú -->
+  <main class="content">
+    <section class="receta-detalle">
+      <h1>Tiramisú</h1>
+      <img src="images/tiramisu.webp" alt="Tiramisú" class="receta-img">
+
+      <p>El <strong>tiramisú</strong> es el postre italiano por excelencia, una combinación de café, cacao y queso mascarpone que encanta en todo el mundo.</p>
+<br>
+      <h2>Ingredientes</h2>
+      <ul>
+        <li>300 g de queso mascarpone</li>
+        <li>3 huevos (separar claras y yemas)</li>
+        <li>100 g de azúcar</li>
+        <li>200 g de bizcochos de soletilla</li>
+        <li>200 ml de café fuerte</li>
+        <li>Cacao en polvo para espolvorear</li>
+      </ul>
+<br>
+      <h2>Preparación paso a paso</h2>
+      <ol>
+        <li>Batir las yemas con el azúcar hasta que blanqueen.</li>
+        <li>Añadir el mascarpone y mezclar hasta obtener una crema suave.</li>
+        <li>Montar las claras a punto de nieve e incorporarlas suavemente.</li>
+        <li>Remojar los bizcochos en café y colocarlos en una fuente.</li>
+        <li>Alternar capas de bizcochos y crema de mascarpone.</li>
+        <li>Espolvorear con cacao en polvo y refrigerar al menos 4 horas.</li>
+      </ol>
+
+     </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Italia a tu mesa. Todos los derechos reservados.</p>
+    <p>By Lorena Villegas</p>
+  </footer>
+  <button id="btnSubir" title="Subir arriba">↑</button>
+  <script>
+  // Toggle del menú
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('.nav-right');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
+  // Botón subir
+  const btnSubir = document.getElementById('btnSubir');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btnSubir.style.display = "block";
+    } else {
+      btnSubir.style.display = "none";
+    }
+  };
+
+  btnSubir.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+
+</html>

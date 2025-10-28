@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Napolitana - Italia a tu mesa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+   <div class="nav-left">
+      <img src="images/logo.webp" alt="Italia a tu mesa" class="logo">
+    </div>
+    <div class="nav-center">
+      <a href="index.html"><img src="images/logohome.webp" alt="Inicio" class="home-icon"></a>
+    </div>
+    
+    <nav class="nav-right">
+      <a href="cultura.html">CULTURA</a>
+      <a href="frases.html">FRASES</a>
+      <a href="historia.html">HISTORIA</a>
+      <a href="recetas.html" class="active">RECETAS</a>
+    </nav>
+  </header>
+
+  <!-- Receta Pizza -->
+  <main class="content">
+    <section class="receta-detalle">
+      <h1>Pizza Napolitana</h1>
+      <img src="images/pizza-napolitana.webp" alt="Pizza Napolitana" class="receta-img">
+
+      <p>La <strong>pizza napolitana</strong> es un clásico italiano con masa delgada, bordes esponjosos y un sabor auténtico gracias a ingredientes frescos y simples.</p>
+<br>
+      <h2>Ingredientes</h2>
+      <ul>
+        <li>500 g de harina de trigo</li>
+        <li>325 ml de agua</li>
+        <li>10 g de sal</li>
+        <li>3 g de levadura seca</li>
+        <li>250 g de tomate triturado</li>
+        <li>250 g de mozzarella fresca</li>
+        <li>Hojas de albahaca fresca</li>
+        <li>Aceite de oliva virgen extra</li>
+      </ul>
+<br>
+      <h2>Preparación paso a paso</h2>
+      <ol>
+        <li>Disolver la levadura en agua y añadir la harina poco a poco.</li>
+        <li>Añadir la sal y amasar hasta obtener una masa suave.</li>
+        <li>Dejar reposar la masa entre 6 y 8 horas.</li>
+        <li>Formar los discos de pizza con las manos, dejando bordes más gruesos.</li>
+        <li>Colocar el tomate, la mozzarella y la albahaca.</li>
+        <li>Hornear en horno muy caliente (250 °C) durante 7-10 minutos.</li>
+      </ol>
+<br>
+       </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Italia a tu mesa. Todos los derechos reservados.</p>
+    <p>By Lorena Villegas</p>
+  </footer>
+  <button id="btnSubir" title="Subir arriba">↑</button>
+  
+  <script>
+  // Toggle del menú
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('.nav-right');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
+  // Botón subir
+  const btnSubir = document.getElementById('btnSubir');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btnSubir.style.display = "block";
+    } else {
+      btnSubir.style.display = "none";
+    }
+  };
+
+  btnSubir.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+
+</html>

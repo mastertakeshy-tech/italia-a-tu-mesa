@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pasta al Pesto - Italia a tu mesa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+   <div class="nav-left">
+      <img src="images/logo.webp" alt="Italia a tu mesa" class="logo">
+    </div>
+    <div class="nav-center">
+      <a href="index.html"><img src="images/logohome.webp" alt="Inicio" class="home-icon"></a>
+    </div>
+    <nav class="nav-right">
+      <a href="cultura.html">CULTURA</a>
+      <a href="frases.html">FRASES</a>
+      <a href="historia.html">HISTORIA</a>
+      <a href="recetas.html" class="active">RECETAS</a>
+    </nav>
+  </header>
+
+  <!-- Receta Pesto -->
+  <main class="content">
+    <section class="receta-detalle">
+      <h1>Pasta al Pesto</h1>
+      <img src="images/pasta-pesto.webp" alt="Pasta al Pesto" class="receta-img">
+
+      <p>La <strong>pasta al pesto</strong> es un plato fresco y aromático que combina albahaca, piñones, ajo y aceite de oliva para crear una salsa verde vibrante.</p>
+<br>
+      <h2>Ingredientes</h2>
+      
+      <ul>
+        <li>400 g de pasta (espaguetis, linguini o trofie)</li>
+        <li>2 tazas de hojas de albahaca fresca</li>
+        <li>50 g de piñones</li>
+        <li>2 dientes de ajo</li>
+        <li>100 g de queso parmesano rallado</li>
+        <li>100 ml de aceite de oliva virgen extra</li>
+        <li>Sal y pimienta al gusto</li>
+      </ul>
+<br>
+      <h2>Preparación paso a paso</h2>
+      <ol>
+        <li>Cocer la pasta en abundante agua con sal hasta que esté al dente.</li>
+        <li>En un mortero o procesador, triturar albahaca, piñones, ajo y parmesano.</li>
+        <li>Añadir poco a poco el aceite de oliva hasta obtener una salsa cremosa.</li>
+        <li>Escurrir la pasta y mezclar con la salsa pesto.</li>
+        <li>Servir con un poco más de queso parmesano encima.</li>
+      </ol>
+
+         </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Italia a tu mesa. Todos los derechos reservados.</p>
+    <p>By Lorena Villegas</p>
+  </footer>
+  <button id="btnSubir" title="Subir arriba">↑</button>
+  
+  <script>
+  // Toggle del menú
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('.nav-right');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
+  // Botón subir
+  const btnSubir = document.getElementById('btnSubir');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btnSubir.style.display = "block";
+    } else {
+      btnSubir.style.display = "none";
+    }
+  };
+
+  btnSubir.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>

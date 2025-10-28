@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia - Italia a tu mesa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="nav-left">
+      <img src="images/logo.png" alt="Italia a tu mesa" class="logo">
+    </div>
+    <div class="nav-center">
+      <a href="index.html"><img src="images/logohome.png" alt="Inicio" class="home-icon"></a>
+    </div>
+    <nav class="nav-right">
+      <a href="cultura.html">CULTURA</a>
+      <a href="frases.html">FRASES</a>
+      <a href="historia.html" class="active">HISTORIA</a>
+      <a href="recetas.html">RECETAS</a>
+          
+      
+    </nav>
+  </header>
+
+  <!-- Historia de los platos -->
+  <section class="historia">
+    <h2>Historia de los platos italianos</h2>
+
+    <div class="cultura-item">
+      <img src="images/pizza-napolitana.webp" alt="Pizza Napolitana" class="cultura-img">
+      <div class="cultura-info">
+        <h3>HISTORIA DE LA PIZZA</h3>
+        <p>
+          La pizza nació en Nápoles, Italia, durante el siglo XVIII como un alimento popular entre las clases trabajadoras. 
+          La versión más famosa, la <strong>Pizza Margherita</strong>, fue creada en 1889 en honor a la reina Margarita de Saboya, 
+          usando los colores de la bandera italiana: rojo (tomate), blanco (mozzarella) y verde (albahaca).
+        </p>
+      </div>
+    </div>
+
+    <div class="cultura-item">
+      <img src="images/pasta-pesto.webp" alt="Pasta" class="cultura-img">
+      <div class="cultura-info">
+        <h3>HISTORIA DE LA PASTA AL PESTO</h3>
+        <p>
+          Aunque existen leyendas que atribuyen la pasta a China, en Italia ya se consumían fideos desde la época del Imperio Romano. 
+          En Sicilia, en el siglo XII, se documenta la producción de pasta seca, ideal para almacenar y transportar. 
+          Desde entonces, se convirtió en uno de los alimentos más representativos de Italia, con cientos de variedades regionales.
+        </p>
+      </div>
+    </div>
+
+    <div class="cultura-item">
+      <img src="images/tiramisu.webp" alt="Tiramisú" class="cultura-img">
+      <div class="cultura-info">
+        <h3>HISTORIA DEL TIRAMISÚ</h3>
+        <p>
+          El tiramisú es un postre relativamente moderno que apareció en la región del Véneto en la década de 1960. 
+          Su nombre significa “levántame el ánimo” en italiano, haciendo referencia a su combinación de café, cacao y crema 
+          que otorgan energía y dulzura. Hoy en día es uno de los postres italianos más reconocidos en el mundo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Italia a tu mesa. Todos los derechos reservados.</p>
+    <p>By Lorena Villegas</p>
+  </footer>
+  <button id="btnSubir" title="Subir arriba">↑</button>
+ 
+ <script>
+  // Toggle del menú
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('.nav-right');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
+  // Botón subir
+  const btnSubir = document.getElementById('btnSubir');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btnSubir.style.display = "block";
+    } else {
+      btnSubir.style.display = "none";
+    }
+  };
+
+  btnSubir.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>

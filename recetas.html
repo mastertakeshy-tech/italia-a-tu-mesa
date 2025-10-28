@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recetas - Italia a tu mesa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="nav-left">
+      <img src="images/logo.webp" alt="Italia a tu mesa" class="logo">
+    </div>
+    <div class="nav-center">
+      <a href="index.html"><img src="images/logohome.webp" alt="Inicio" class="home-icon"></a>
+    </div>
+    <nav class="nav-right">
+        <a href="cultura.html">CULTURA</a>
+        <a href="frases.html">FRASES</a>
+        <a href="historia.html">HISTORIA</a>
+        <a href="recetas.html" class="active">RECETAS</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1 class="page-title">Recetas Italianas</h1>
+
+    <div class="receta-item">
+      <img src="images/pizza-napolitana.webp" alt="Pizza Napolitana" class="receta-img">
+      <div class="receta-info">
+        <h2>Pizza Napolitana</h2>
+        <p>La tradicional pizza napolitana con masa delgada y bordes esponjosos.</p>
+        <a href="pizza.html" class="btn-outline">Ver receta</a>
+      </div>
+    </div>
+
+    <div class="receta-item">
+      <img src="images/pasta-pesto.webp" alt="Pasta al Pesto" class="receta-img">
+      <div class="receta-info">
+        <h2>Pasta al Pesto</h2>
+        <p>Un plato fresco con albahaca, piñones, ajo y aceite de oliva.</p>
+        <a href="pesto.html" class="btn-outline">Ver receta</a>
+      </div>
+    </div>
+
+    <div class="receta-item">
+      <img src="images/tiramisu.webp" alt="Tiramisú" class="receta-img">
+      <div class="receta-info">
+        <h2>Tiramisú</h2>
+        <p>El postre italiano por excelencia, con café, cacao y queso mascarpone.</p>
+        <a href="tiramisu.html" class="btn-outline">Ver receta</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Italia a tu mesa. Todos los derechos reservados.</p>
+    <p>By Lorena Villegas</p>
+  </footer>
+  <button id="btnSubir" title="Subir arriba">↑</button>
+
+
+  <script>
+  // Toggle del menú
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('.nav-right');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
+  // Botón subir
+  const btnSubir = document.getElementById('btnSubir');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btnSubir.style.display = "block";
+    } else {
+      btnSubir.style.display = "none";
+    }
+  };
+
+  btnSubir.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
